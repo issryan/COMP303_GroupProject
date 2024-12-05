@@ -1,7 +1,14 @@
 package com.tanyaryanjiu.assignment4.Entity;
+import org.springframework.data.annotation.*;
+import org.springframework.data.mongodb.core.mapping.Document;
+import jakarta.validation.constraints.NotBlank;
+
+@Document(collection = "BloodBank")
 public class BloodBank {
-    private int id;
-    private String bloodbankName;
+    @Id
+    private String id;
+    @NotBlank
+    private String name;
     private String address;
     private String city;
     private String phone;
@@ -11,11 +18,10 @@ public class BloodBank {
     // Constructors
     public BloodBank() {};
     
-    public BloodBank(int id, String bloodbankName, String address, String city, String phone, String website,
+    public BloodBank(String id, @NotBlank String name, String address, String city, String phone, String website,
 			String email) {
-		super();
 		this.id = id;
-		this.bloodbankName = bloodbankName;
+		this.name = name;
 		this.address = address;
 		this.city = city;
 		this.phone = phone;
@@ -24,17 +30,17 @@ public class BloodBank {
 	}
     
 	// Getters and Setters
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
-	public String getBloodbankName() {
-		return bloodbankName;
+	public String getName() {
+		return name;
 	}
-	public void setBloodbankName(String bloodbankName) {
-		this.bloodbankName = bloodbankName;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getAddress() {
 		return address;
@@ -66,6 +72,4 @@ public class BloodBank {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-
 }

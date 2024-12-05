@@ -1,28 +1,42 @@
 package com.tanyaryanjiu.assignment4.Entity;
+import java.util.Date;
+import org.springframework.data.annotation.*;
+import org.springframework.data.mongodb.core.mapping.Document;
+import jakarta.validation.constraints.NotBlank;
 
+
+@Document(collection = "BloodStock")
 public class BloodStock {
-    private int id;
+    @Id
+    private String id;
+    @NotBlank
     private String bloodGroup;
     private int quantity;
-    private String bestBefore;
-    private String status;
+    private Date bestBefore;
+    private String status; // Available or Out Of Stock
+    private String donorId;
+    private String bloodBankId;
     
     // Constructors
     public BloodStock() {};
     
-    public BloodStock(int id, String bloodGroup, int quantity, String bestBefore, String status) {
+    public BloodStock(String id, @NotBlank String bloodGroup, int quantity, Date bestBefore, String status,
+			String donorId, String bloodBankId) {
 		super();
 		this.id = id;
 		this.bloodGroup = bloodGroup;
 		this.quantity = quantity;
 		this.bestBefore = bestBefore;
 		this.status = status;
+		this.donorId = donorId;
+		this.bloodBankId = bloodBankId;
 	}
+    
 	// Getters and Setters
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getBloodGroup() {
@@ -37,10 +51,10 @@ public class BloodStock {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	public String getBestBefore() {
+	public Date getBestBefore() {
 		return bestBefore;
 	}
-	public void setBestBefore(String bestBefore) {
+	public void setBestBefore(Date bestBefore) {
 		this.bestBefore = bestBefore;
 	}
 	public String getStatus() {
@@ -49,6 +63,16 @@ public class BloodStock {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-
-
+	public String getDonorId() {
+		return donorId;
+	}
+	public void setDonorId(String donorId) {
+		this.donorId = donorId;
+	}
+	public String getBloodBankId() {
+		return bloodBankId;
+	}
+	public void setBloodBankId(String bloodBankId) {
+		this.bloodBankId = bloodBankId;
+	}
 }

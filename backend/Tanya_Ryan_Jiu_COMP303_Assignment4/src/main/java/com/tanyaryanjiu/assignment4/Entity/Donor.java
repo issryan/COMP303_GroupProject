@@ -1,40 +1,46 @@
-/* Tanya Truong 
- * 301298361
- * Nov 27, 2024
- */
+
 package com.tanyaryanjiu.assignment4.Entity;
 
+import java.util.List;
+import org.springframework.data.annotation.*;
+import org.springframework.data.mongodb.core.mapping.Document;
+import jakarta.validation.constraints.NotBlank;
+
+@Document(collection = "Donor")
 public class Donor {
-    private int id;
+    @Id
+    private String id;
+    @NotBlank
     private String firstName;
+    @NotBlank
     private String lastName;
     private int age;
-    private String gender;
+    @NotBlank
     private String bloodGroup;
     private String city;
     private String phone;
+    private List<String> donationHistory; // IDs of blood stocks donated by this donor
     
     // Constructors
     public Donor() {};
     
-    public Donor(int id, String firstName, String lastName, int age, String gender, String bloodGroup, String city,
-			String phone) {
-		super();
+    public Donor(String id, @NotBlank String firstName, @NotBlank String lastName, int age, @NotBlank String bloodGroup,
+			String city, String phone, List<String> donationHistory) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
-		this.gender = gender;
 		this.bloodGroup = bloodGroup;
 		this.city = city;
 		this.phone = phone;
+		this.donationHistory = donationHistory;
 	}
     
 	// Getters and Setters
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getFirstName() {
@@ -55,12 +61,6 @@ public class Donor {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public String getGender() {
-		return gender;
-	}
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
 	public String getBloodGroup() {
 		return bloodGroup;
 	}
@@ -79,7 +79,10 @@ public class Donor {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-
-
-    
+	public List<String> getDonationHistory() {
+		return donationHistory;
+	}
+	public void setDonationHistory(List<String> donationHistory) {
+		this.donationHistory = donationHistory;
+	}
 }
