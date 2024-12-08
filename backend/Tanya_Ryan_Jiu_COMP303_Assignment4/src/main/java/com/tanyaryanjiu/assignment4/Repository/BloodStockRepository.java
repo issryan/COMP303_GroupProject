@@ -8,7 +8,8 @@ import com.tanyaryanjiu.assignment4.Entity.BloodStock;
 
 @Repository
 public interface BloodStockRepository extends MongoRepository<BloodStock, String> {
-    List<BloodStock> findByBloodGroup(String bloodGroup);
+    @Query
+	List<BloodStock> findByBloodGroup(String bloodGroup);
     @Query
     List<BloodStock> findByDonorId(String donorId);
 }
