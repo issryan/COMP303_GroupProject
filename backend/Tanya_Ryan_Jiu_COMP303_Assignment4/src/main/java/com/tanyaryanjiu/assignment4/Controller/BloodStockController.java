@@ -4,17 +4,31 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.tanyaryanjiu.assignment4.Entity.BloodStock;
+import com.tanyaryanjiu.assignment4.Entity.Donor;
 import com.tanyaryanjiu.assignment4.Repository.BloodStockRepository;
+import com.tanyaryanjiu.assignment4.Repository.DonorRepository;
 
 @RestController
 @RequestMapping("/bloodstocks")
 public class BloodStockController {
     @Autowired
     private BloodStockRepository bloodStockRepository;
+    @Autowired
+    private DonorRepository donorRepository;
 
     @PostMapping
     public BloodStock addBloodStock(@RequestBody BloodStock bloodStock) {
-        return bloodStockRepository.save(bloodStock);
+    	BloodStock savedBloodStock = bloodStockRepository.save(bloodStock);
+
+        // Update donor's donation history
+        Donor donor = donorRepository.findById(bloodStock.getDonorId())
+            .orElseThrow(() -> new RuntimeException("Donor not found"));
+        List<String> donationHistory = donor.getDonationHistory();
+        donationHistory.add(savedBloodStock.getId());
+        donor.setDonationHistory(donationHistory);
+        donorRepository.save(donor);
+
+        return savedBloodStock;
     }
 
     @GetMapping
