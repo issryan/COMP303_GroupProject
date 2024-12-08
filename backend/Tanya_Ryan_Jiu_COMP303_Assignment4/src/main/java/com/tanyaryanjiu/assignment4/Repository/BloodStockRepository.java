@@ -11,5 +11,7 @@ public interface BloodStockRepository extends MongoRepository<BloodStock, String
     @Query
 	List<BloodStock> findByBloodGroup(String bloodGroup);
     @Query
+    List<BloodStock> findByStatus(String status);
+    @Query
     List<BloodStock> findByDonorId(String donorId);
 }

@@ -51,8 +51,13 @@ public class BloodStockController {
         return bloodStockRepository.save(existingBloodStock);
     }
 
-    @GetMapping("/availability/{bloodGroup}")
-    public List<BloodStock> checkBloodAvailability(@PathVariable String bloodGroup) {
+    @GetMapping("/bloodgroup/{bloodGroup}")
+    public List<BloodStock> checkBloodGroup(@PathVariable String bloodGroup) {
         return bloodStockRepository.findByBloodGroup(bloodGroup);
+    }
+    
+    @GetMapping("/status/{status}")
+    public List<BloodStock> checkBloodStatus(@PathVariable String status){
+    	return bloodStockRepository.findByStatus(status);
     }
 }
