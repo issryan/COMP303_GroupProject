@@ -1,38 +1,1135 @@
-.App {
+/* General Styling */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+  padding-top: 80px;
+  overflow-x: hidden;
+}
+
+.app {
+  text-align: center;
+  padding: 0;
+}
+
+/* Header Section */
+.header {
+  background-color: #fff;
+  padding: 60px 20px;
+  padding-top: 0px;
+  position: relative;
+  width: 100%;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  margin-top: -30px;
+}
+
+.admin-image {
+  width: 90%;
+  margin-left: 4%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+/* Overlay on top of the image */
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 150px;
+  color: white;
+  padding: 15px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.overlay h1 {
+  margin: 0;
+}
+
+.header h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Why Donate Section */
+.why-donate {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.why-donate h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #222;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.image-wrapper {
+  margin-bottom: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image-wrapper img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.benefit-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Why Donate Section */
+.why-donate {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.why-donate h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #222;
+  text-align: center;
+}
+
+.benefits {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping to the next line */
+  justify-content: center; /* Center-aligns cards in each row */
+  gap: 20px; /* Adds space between cards */
+  max-width: 1200px; /* Ensures the container isn't too wide */
+  margin: 0 auto; /* Centers the container */
+}
+
+.benefit-card {
+  background-color: #fdecec;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  width: 300px; /* Fixed width for each card */
+  height: 220px; /* Fixed height for consistent alignment */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Footer Section */
+.footer {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.footer h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.newsletter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.newsletter input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #e63946;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #c5303a;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  font-size: 20px;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #e63946;
+}
+
+/* General Section Styling */
+section {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center-align the content horizontally */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Impact Metrics Section */
+.impact-metrics {
+  gap: 30px; /* Space between the title and content */
+  max-width: 1200px; /* Limit width for proper alignment */
+  margin: 0 auto; /* Center-align within the page */
+}
+
+.impact-metrics h2 {
+  font-size: 28px;
+  color: #222;
+  margin: 0;
+}
+
+.metrics {
+  display: flex;
+  justify-content: center; /* Center-align the metrics horizontally */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px; /* Space between metric boxes */
+}
+
+.metric {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  width: 200px; /* Set a fixed width for each metric */
+  text-align: center;
+}
+
+.metric h3 {
+  font-size: 32px;
+  color: #e63946;
+  margin-bottom: 5px;
+}
+
+.metric p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Become a Donor Section */
+.become-donor {
+  gap: 30px; /* Space between the title and the form */
+  max-width: 1200px; /* Limit width for proper alignment */
+  margin: 0 auto; /* Center-align within the page */
+}
+
+.become-donor h2 {
+  font-size: 28px;
+  color: #222;
+  margin: 0;
+}
+
+.become-donor p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.donor-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center-align the form horizontally */
+  gap: 15px; /* Space between input fields */
+}
+
+.donor-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%; /* Full width inside form */
+  max-width: 300px;
+  background-color: #fdecec; /* Light pink background */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.input-select{
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%; /* Full width inside form */
+  max-width: 325px;
+  background-color: #fdecec; /* Light pink background */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  outline: none
+}
+
+.donor-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #e63946;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  transition: background-color 0.3s ease;
+}
+
+.donor-form button:hover {
+  background-color: #c5303a;
+}
+
+/* Become a Donor Form Styling */
+.donor-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two inputs per row */
+  gap: 15px; /* Space between inputs */
+  max-width: 800px; /* Increase max-width to make the form wider */
+  width: 100%; /* Ensure the form takes full width of its container */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+/* Style for input-group (label + input) */
+.input-group {
+  display: flex;
+  flex-direction: column; /* Stack label and input vertically */
+  gap: 8px; /* Space between label and input */
+}
+
+/* Label styling */
+.input-group label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  text-align: left; /* Align label to the left */
+}
+
+/* Apply margin-right to inputs in the first column */
+.donor-form input:nth-child(even) {
+  margin-right: 15px; /* Space between the two inputs in each row */
+}
+
+.donor-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fdecec; /* Light pink background */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Full width inside the grid column */
+}
+
+/* Last input spans two columns */
+.donor-form input:last-of-type {
+  grid-column: span 2; /* Make the last input span across both columns */
+}
+
+/* Button styling */
+.donor-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #e63946;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 100%; /* Full width of the grid column */
+  grid-column: span 2; /* Button spans across both columns */
+  transition: background-color 0.3s ease;
+  margin-top: 40px;
+}
+
+.donor-form button:hover {
+  background-color: #c5303a;
+}
+
+/* Navigation Bar Styling */
+
+.navbar {
+  background-color: #fff; /* Dark background for the header */
+  padding: 20px 0;
+  position: fixed; /* Use fixed positioning to keep the navbar visible at all times */
+  top: 0; /* Align it at the top of the page */
+  width: 100%; /* Ensure the navbar spans the full width of the screen */
+  z-index: 1000; /* Ensure it's above other content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+  display: flex; /* Flexbox layout to align items */
+  align-items: center; /* Vertically center content */
+  justify-content: space-between; /* Space out the logo and nav items */
+  margin-left: -20px!important
+}
+
+/* Styling for the logo */
+.navbar .logo img {
+  width: 150px; /* Set the size of the logo */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 20px; /* Add left margin if needed */
+}
+
+/* Navbar container to center the content */
+.navbar nav ul {
+  display: flex; /* Horizontally align the nav items */
+  justify-content: center; /* Center the nav items */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual list items with spacing */
+.navbar nav ul li {
+  margin: 0 20px; /* Horizontal spacing between items */
+}
+
+/* Link styling */
+.navbar nav ul li a {
+  color: #000; /* Black color for links */
+  text-decoration: none; /* No underline */
+  font-size: 18px;
+  font-weight: 400; /* Normal weight */
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border-radius: 8px; /* Rounded corners */
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Hover effect on links */
+.navbar nav ul li a:hover {
+  /* font-weight: 600; Bold on hover */
+  background-color: #fdecec; /* Red background on hover */
+  color: #000; /* White text on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for hover effect */
+}
+
+/* Active link state */
+.navbar nav ul li a.active {
+  background-color: #fdecec; /* Red background for active link */
+  color: #000; /* White text for active link */
+  /* font-weight: 600; Bold text for active link */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Subtle shadow for active state */
+}
+
+/* Responsive header */
+@media (max-width: 768px) {
+  .navbar nav ul {
+    flex-direction: column; /* Stack links vertically on small screens */
+    gap: 15px; /* Space between links */
+  }
+
+  .navbar nav ul li {
+    margin: 0;
+  }
+
+  .navbar nav ul li a {
+    font-size: 16px;
+    padding: 12px 30px; /* More padding on smaller screens */
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Table Styles */
+table {
+  width: 90%;
+  /* margin-left: 5%; */
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+td .btn{
+  color: rgb(71, 71, 71);
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #eeebeb;
+}
+
+th {
+  background-color: #f4f4f9;
+  color: #333;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Action Button */
+.btn {
+  background-color: #596db1;
   color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  
 }
 
-.App-link {
-  color: #61dafb;
+td .btn:hover{
+  color: #35368a;
+  font-weight: 500;
+  background-color: #c0bebe!important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn:hover {
+  background-color: #35368a;
+  
+}
+
+.btn:focus {
+  outline: none;
+}
+
+/* Table Specific Styles */
+
+.donors-list{
+  padding-top: 0px!important;
+}
+
+section h2{
+  font-size: 32px!important
+}
+
+/* Donors List Table */
+.donors-list table th {
+  background-color: #e0f7fa;
+  color: #00695c;
+}
+
+.donors-list table td {
+  background-color: #ffffff;
+}
+
+.donors-list table tr:hover {
+  background-color: #f1f8f7;
+}
+
+/* Blood Banks List Table */
+.blood-banks-list table th {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.blood-banks-list table td {
+  background-color: #ffffff;
+}
+
+.blood-banks-list table tr:hover {
+  background-color: #bbdefb;
+}
+
+/* Blood Stock List Table */
+.blood-stock-list table th {
+  background-color: #fff3e0;
+  color: #ff6f00;
+}
+
+.blood-stock-list table td {
+  background-color: #ffffff;
+}
+
+.blood-stock-list table tr:hover {
+  background-color: #fff8e1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
   }
-  to {
-    transform: rotate(360deg);
+
+  th, td {
+    padding: 8px;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 12px;
   }
 }
+
+/* Section Header Styles */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 90%;
+  text-align: left;
+}
+
+.add-btn {
+  background-color: #f18282;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  margin-left: 90px
+}
+
+.add-btn:hover {
+  background-color: #be4b4b;
+}
+
+.add-btn:focus {
+  outline: none;
+}
+
+/* General Styles */
+.profile-page {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Adjust height of the fade */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+  z-index: 2;
+}
+
+.banner-image {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.profile-info {
+  left: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #000;
+}
+
+.profile-info h2 {
+  margin-top: 10px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verified-badge {
+  color: #007bff;
+  margin-left: 5px;
+}
+
+.username {
+  color: #555;
+  font-size: 16px;
+}
+
+.edit-profile {
+  margin: 60px 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edit-profile h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: left;
+}
+
+.profile-form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+ .form-grid input {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fdecec; /* Light pink background */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.profile-form input {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fdecec; /* Light pink background */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.profile-form h2{
+  text-align: left;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+
+.action-btn {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff;
+  width: 200px;
+}
+
+.action-btn:hover{
+  background-color: #999898;
+}
+
+/* Donation History Page */
+.donation-history {
+  padding: 20px;
+}
+
+.donation-cards {
+  width: 85%;
+  margin-left: 7%;
+  display: flex;
+  flex-wrap: wrap; /* Ensure cards wrap to the next row if needed */
+  justify-content: space-between; /* Add space between cards */
+  gap: 40px; /* Add space between rows */
+  margin-top: 50px
+}
+
+.donation-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 45%; /* Ensure two cards fit in one row with spacing */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mt-3{
+  margin-top: 60px
+}
+
+.donation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #8f4343;
+  text-align: left;
+}
+
+.card-content {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out the items */
+  align-items: center; /* Align items vertically */
+  gap: 20px;
+}
+
+.card-content p {
+  font-size: 16px;
+  margin: 0;
+  color: #555;
+}
+
+.card-content strong {
+  color: #333;
+}
+
+.blood-availability {
+  font-family: Arial, sans-serif;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner-overlay {
+  position: absolute;
+  bottom: 80px;
+  left: 150px;
+  color: white;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+
+.banner-overlay h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.banner-overlay p {
+  margin: 10px 0;
+}
+
+.search-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.blood-banks-section {
+  padding: 20px;
+  width: 90%;
+  margin-left: 4%
+}
+
+.blood-banks-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.blood-banks-list1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 40px;
+  width: 100%
+}
+
+.blood-bank-card {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: calc(46% - 20px);
+  text-align: left;
+  background-color: #fdecec;
+}
+
+.blood-bank-card h3 {
+  font-size: 20px;
+  color: #5f2429;
+}
+
+.blood-bank-card p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.contact-button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 16px;
+  
+}
+
+.contact-button:hover {
+  background-color: darkred;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-input {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+.search-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.pt-0{
+  margin-top: -50px!important
+}
+
+.date-input {
+  width: 95%!important
+}
+
+.blood-group-input{
+  width: 95%!important
+}
+
+
+.schedule-donation {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fefefe;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-donation h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+  text-align: left;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 16px;
+}
+
+.confirm-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #d9534f;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-button:hover {
+  background-color: #c9302c;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirm-button:hover {
+  background-color: #c9302c;
+}
+
+.cancel-button {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  width: 200px;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+  background-color: #dad8d8;
+}
+
+.bottom-buttons{
+  margin-top: 40px;
+  width: 80%
+}
+
+.bottom-buttons .cancel-button{
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  width: 200px;
+  transition: background-color 0.3s ease;
+}
+.bottom-buttons .cancel-button:hover {
+  background-color: #dad8d8;
+}
+
+/* .bottom-buttons .submit-button {
+width: 100px
+} */
+
+/* Basic Modal Styling */
+.modal {
+  position: fixed; /* Position it fixed so it covers the screen */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the viewport */
+  height: 100%; /* Full height of the viewport */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center; /* Align the modal in the center */
+  align-items: center; /* Align the modal in the center vertically */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* When modal is visible, change display to flex */
+.modal.visible {
+  display: flex;
+}
+
+/* Modal content styling */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20%;
+  margin-left: 30%
+}
+
+/* Close button styling */
+.modal .btn.cancel-btn {
+  background-color: #ff5c5c; /* Red color for cancel */
+}
+
+.width-300{
+  width: 90%!important;
+  text-align: left;
+}
+.back-button {
+  background-color: #f75159;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  width: 200px
+}
+
+.back-button:hover {
+  background-color: #f33333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

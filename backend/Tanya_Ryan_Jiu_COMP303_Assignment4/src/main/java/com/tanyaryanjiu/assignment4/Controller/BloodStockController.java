@@ -34,6 +34,9 @@ public class BloodStockController {
             .orElseThrow(() -> new RuntimeException("Blood Stock not found"));
         existingBloodStock.setQuantity(bloodStock.getQuantity());
         existingBloodStock.setStatus(bloodStock.getStatus());
+        existingBloodStock.setBestBefore(bloodStock.getBestBefore());
+        existingBloodStock.setBloodBankId(bloodStock.getBloodBankId());
+        existingBloodStock.setBloodGroup(bloodStock.getBloodGroup());
         return bloodStockRepository.save(existingBloodStock);
     }
 

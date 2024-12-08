@@ -34,6 +34,10 @@ public class BloodBankController {
             .orElseThrow(() -> new RuntimeException("Blood Bank not found"));
         existingBloodBank.setName(bloodBank.getName());
         existingBloodBank.setAddress(bloodBank.getAddress());
+        existingBloodBank.setEmail(bloodBank.getEmail());
+        existingBloodBank.setCity(bloodBank.getCity());
+        existingBloodBank.setPhone(bloodBank.getPhone());
+        existingBloodBank.setWebsite(bloodBank.getWebsite());
         return bloodBankRepository.save(existingBloodBank);
     }
 }

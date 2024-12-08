@@ -38,11 +38,17 @@ public class DonorController {
             .orElseThrow(() -> new RuntimeException("Donor not found"));
         currentDonor.setFirstName(donor.getFirstName());
         currentDonor.setLastName(donor.getLastName());
+        currentDonor.setAge(donor.getAge());
+        currentDonor.setBloodGroup(donor.getBloodGroup());
+        currentDonor.setCity(donor.getCity());
+        currentDonor.setGender(donor.getGender());
+        currentDonor.setPhone(donor.getPhone());
         return donorRepository.save(currentDonor);
     }
 
-    @GetMapping("/{id}/history")
-    public List<BloodStock> getDonorHistory(@PathVariable String id) {
-        return bloodStockRepository.findByDonorId(id);
-    }
+	/*
+	 * @GetMapping("/{id}/history") public List<BloodStock>
+	 * getDonorHistory(@PathVariable String id) { return
+	 * bloodStockRepository.findByDonorId(id); }
+	 */
 }

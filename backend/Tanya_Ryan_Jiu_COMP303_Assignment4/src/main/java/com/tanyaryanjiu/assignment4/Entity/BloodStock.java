@@ -14,21 +14,20 @@ public class BloodStock {
     private int quantity;
     private Date bestBefore;
     private String status; // Available or Out Of Stock
-    private String donorId;
+    //private String donorId;
     private String bloodBankId;
     
     // Constructors
     public BloodStock() {};
     
     public BloodStock(String id, @NotBlank String bloodGroup, int quantity, Date bestBefore, String status,
-			String donorId, String bloodBankId) {
+		 String bloodBankId) {
 		super();
 		this.id = id;
 		this.bloodGroup = bloodGroup;
 		this.quantity = quantity;
 		this.bestBefore = bestBefore;
 		this.status = status;
-		this.donorId = donorId;
 		this.bloodBankId = bloodBankId;
 	}
     
@@ -62,12 +61,6 @@ public class BloodStock {
 	}
 	public void setStatus(String status) {
 		this.status = status;
-	}
-	public String getDonorId() {
-		return donorId;
-	}
-	public void setDonorId(String donorId) {
-		this.donorId = donorId;
 	}
 	public String getBloodBankId() {
 		return bloodBankId;
