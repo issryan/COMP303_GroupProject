@@ -27,13 +27,13 @@ public class DonorController {
     }
 
     @GetMapping("/{id}")
-    public Donor getDonor(@PathVariable String id) {
+    public Donor getDonor(@PathVariable("id") String id) {
         return donorRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Donor not found"));
     }
 
     @PutMapping("/{id}")
-    public Donor updateDonor(@PathVariable String id, @RequestBody Donor donor) {
+    public Donor updateDonor(@PathVariable("id") String id, @RequestBody Donor donor) {
         Donor currentDonor = donorRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Donor not found"));
         currentDonor.setFirstName(donor.getFirstName());
@@ -45,10 +45,4 @@ public class DonorController {
         currentDonor.setPhone(donor.getPhone());
         return donorRepository.save(currentDonor);
     }
-
-	/*
-	 * @GetMapping("/{id}/history") public List<BloodStock>
-	 * getDonorHistory(@PathVariable String id) { return
-	 * bloodStockRepository.findByDonorId(id); }
-	 */
 }

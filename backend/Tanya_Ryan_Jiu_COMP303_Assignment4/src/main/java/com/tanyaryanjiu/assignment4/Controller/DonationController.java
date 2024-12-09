@@ -23,13 +23,13 @@ public class DonationController {
     }
 
     @GetMapping("/{id}")
-    public Donation getDonation(@PathVariable String id) {
+    public Donation getDonation(@PathVariable("id") String id) {
         return donationRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Donation not found"));
     }
 
     @PutMapping("/{id}")
-    public Donation updateDonation(@PathVariable String id, @RequestBody Donation donation) {
+    public Donation updateDonation(@PathVariable("id") String id, @RequestBody Donation donation) {
         Donation currentDonation = donationRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Donation not found"));
         currentDonation.setStatus(donation.getStatus());
@@ -39,7 +39,7 @@ public class DonationController {
 
 	
 	 @GetMapping("/{id}/history") public List<Donation>
-	 getDonorHistory(@PathVariable String id) { return
+	 getDonorHistory(@PathVariable("id") String id) { return
 	 donationRepository.findByDonorId(id); 
 	 }
 	 

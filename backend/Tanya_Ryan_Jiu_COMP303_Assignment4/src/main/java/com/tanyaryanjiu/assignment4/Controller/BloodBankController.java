@@ -23,13 +23,13 @@ public class BloodBankController {
     }
 
     @GetMapping("/{id}")
-    public BloodBank getBloodBank(@PathVariable String id) {
+    public BloodBank getBloodBank(@PathVariable("id") String id) {
         return bloodBankRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Blood Bank not found"));
     }
 
     @PutMapping("/{id}")
-    public BloodBank updateBloodBank(@PathVariable String id, @RequestBody BloodBank bloodBank) {
+    public BloodBank updateBloodBank(@PathVariable("id") String id, @RequestBody BloodBank bloodBank) {
         BloodBank existingBloodBank = bloodBankRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Blood Bank not found"));
         existingBloodBank.setName(bloodBank.getName());

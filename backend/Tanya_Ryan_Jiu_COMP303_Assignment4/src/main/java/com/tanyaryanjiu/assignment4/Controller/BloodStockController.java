@@ -23,13 +23,13 @@ public class BloodStockController {
     }
 
     @GetMapping("/{id}")
-    public BloodStock getBloodStock(@PathVariable String id) {
+    public BloodStock getBloodStock(@PathVariable("id") String id) {
         return bloodStockRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Blood Stock not found"));
     }
 
     @PutMapping("/{id}")
-    public BloodStock updateBloodStock(@PathVariable String id, @RequestBody BloodStock bloodStock) {
+    public BloodStock updateBloodStock(@PathVariable("id") String id, @RequestBody BloodStock bloodStock) {
         BloodStock existingBloodStock = bloodStockRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Blood Stock not found"));
         existingBloodStock.setQuantity(bloodStock.getQuantity());
@@ -41,7 +41,7 @@ public class BloodStockController {
     }
 
     @GetMapping("/availability/{bloodGroup}")
-    public List<BloodStock> checkBloodAvailability(@PathVariable String bloodGroup) {
+    public List<BloodStock> checkBloodAvailability(@PathVariable("bloodGroup") String bloodGroup) {
         return bloodStockRepository.findByBloodGroup(bloodGroup);
     }
 }
